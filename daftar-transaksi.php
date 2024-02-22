@@ -19,7 +19,7 @@ include("header.php");
 		</thead>
 		<tbody>
         <?php
-            include("koneksi/koneksi.php");
+            include("conn/koneksi.php");
 
             $sql = $koneksi->query("SELECT * FROM penjualan ORDER BY PenjualanID DESC LIMIT 1");
             while ($data= $sql->fetch_assoc()) {
@@ -57,7 +57,7 @@ include("header.php");
                               <?php
                                 $sql4 = $koneksi->query("SELECT * FROM produk WHERE ProdukID = '" . $data3['ProdukID'] . "' ");
                                 while ($data4= $sql4->fetch_assoc()) {
-                                    echo $data4['NamaProduk'];
+                                    echo $data4['nama'];
                                 }
                               ?>
                               </td>

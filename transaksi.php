@@ -65,11 +65,11 @@ if (isset($_POST['tambah'])) {
                 <select id="menu" name="menu[]" class="form-control">
                     <option>Pilih Menu</option>
                     <?php
-                        $sql6 = $koneksi->query("SELECT * FROM produk WHERE Stok > 0");
+                        $sql6 = $koneksi->query("SELECT * FROM produk WHERE stok > 0");
                         while ($data = $sql6->fetch_assoc()) {
                     ?>
-                    <option value="<?php echo $data['ProdukID'] . '|' . $data['Harga']; ?>">
-                        <?php echo $data['NamaProduk'] . " - Rp." . number_format($data['Harga']) . " - Stok:" . $data['Stok']; ?>
+                    <option value="<?php echo $data['ProdukID'] . '|' . $data['harga']; ?>">
+                        <?php echo $data['nama'] . " - Rp." . number_format($data['harga']) . " - stok:" . $data['stok']; ?>
                     </option>
                     <?php } ?>
                 </select>
@@ -119,8 +119,8 @@ if (isset($_POST['tambah'])) {
                                     $sql7 = $koneksi->query("SELECT * FROM produk WHERE Stok > 0");
                                     while ($data = $sql7->fetch_assoc()) {
                                 ?>
-                                <option value="<?php echo $data['ProdukID'] . '|' . $data['Harga']; ?>">
-                                    <?php echo $data['NamaProduk'] . " - Rp." . number_format($data['Harga']) . " - Stok:" . $data['Stok']; ?>
+                                <option value="<?php echo $data['ProdukID'] . '|' . $data['harga']; ?>">
+                                    <?php echo $data['nama'] . " - Rp." . number_format($data['harga']) . " - stok:" . $data['stok']; ?>
                                 </option>
                                 <?php } ?>
                               </select>

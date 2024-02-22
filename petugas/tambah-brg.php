@@ -51,7 +51,7 @@ if (isset($_POST['tambah'])) {
   $uploadOk = 1;
 
   if (move_uploaded_file($_FILES["foto"]["tmp_name"], $targetfile)) {
-      $sql = "INSERT INTO produk (ProdukID, NamaProduk, Harga, Stok, foto) VALUES ('$id','$nama', '$harga', '$stok', '$filename')";
+      $sql = "INSERT INTO produk (ProdukID, nama, Harga, Stok, foto) VALUES ('$id','$nama', '$harga', '$stok', '$filename')";
       if ($koneksi->query($sql) === TRUE) {
           echo "<script>alert('Berhasil menambahkan produk');window.location.href='?page=stok';</script>";
           exit();

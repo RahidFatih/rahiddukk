@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplikasi Kasir</title>
-  <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
               <p style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             ============================
         <?php
-            include("koneksi/koneksi.php");
+            include("conn/koneksi.php");
 
             $sql = $koneksi->query("SELECT * FROM penjualan ORDER BY PenjualanID DESC LIMIT 1");
             while ($data= $sql->fetch_assoc()) {
@@ -53,7 +53,7 @@
                               <?php
                                 $sql4 = $koneksi->query("SELECT * FROM produk WHERE ProdukID = '" . $data3['ProdukID'] . "' ");
                                 while ($data4= $sql4->fetch_assoc()) {
-                                    echo $data4['NamaProduk'];
+                                    echo $data4['nama'];
                                 }
                               ?>
                               </td>

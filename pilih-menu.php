@@ -1,5 +1,5 @@
 <?php
-include("../conn/koneksi.php");
+include("conn/koneksi.php");
 include("header.php");
 ?>
 <body>

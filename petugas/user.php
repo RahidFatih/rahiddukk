@@ -35,7 +35,7 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $no++ ?></td>
-                                    <td><?php echo $data['username']; ?></td>
+                                    <td><?php echo $data['Username']; ?></td>
                                     <td><?php echo $data['password']; ?></td>
                                     <td><?php echo $data['level']; ?></td>
                                     <?php 
